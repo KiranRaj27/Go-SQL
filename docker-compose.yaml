@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sample
+      MYSQL_DATABASE: test
+      MYSQL_USER: iam
+      MYSQL_PASSWORD: iampass
+    ports:
+      - "3306:3306"
